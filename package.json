@@ -13,6 +13,16 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": "https://github.com/pedroapfilho/iso-country-utils.git",
+  "keywords": [
+    "ISO 3166",
+    "country",
+    "helper"
+  ],
+  "bugs": {
+    "url": "https://github.com/pedroapfilho/iso-country-utils/issues"
+  },
+  "homepage": "https://github.com/pedroapfilho/iso-country-utils#readme",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
