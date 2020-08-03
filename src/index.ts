@@ -1,20 +1,21 @@
-import countries from 'countries.json';
+import countries from './countries.json';
+
 import { Country } from 'types';
 
-const getCountryFromName = (name: string): Country | false => {
-  return countries.find(c => c.name === name) || false;
+const getCountryFromName = (name: string): Country => {
+  return countries.filter(c => c.name === name)[0];
 };
 
-const getCountryFromAlpha2 = (alpha2: string): Country | false => {
-  return countries.find(c => c.alpha2 === alpha2) || false;
+const getCountryFromAlpha2 = (alpha2: string): Country => {
+  return countries.filter(c => c.alpha2 === alpha2)[0];
 };
 
-const getCountryFromAlpha3 = (alpha3: string): Country | false => {
-  return countries.find(c => c.alpha3 === alpha3) || false;
+const getCountryFromAlpha3 = (alpha3: string): Country => {
+  return countries.filter(c => c.alpha3 === alpha3)[0];
 };
 
-const getCountryFromCode = (code: string): Country | false => {
-  return countries.find(c => c.code === code) || false;
+const getCountryFromCode = (code: string): Country => {
+  return countries.filter(c => c.code === code)[0];
 };
 
 export {

@@ -16,7 +16,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "yarn generate && tsdx test",
     "lint": "tsdx lint",
     "prepare": "yarn generate && tsdx build",
     "generate": "ts-node utils/generateCountries.ts"
