@@ -1,6 +1,6 @@
 import countries from './countries.json';
 
-import { Country } from 'types';
+import { Country } from './types';
 
 const getCountryFromName = (name: string): Country | undefined => {
   return countries.find(c => c.name.toUpperCase() === name.toUpperCase());
