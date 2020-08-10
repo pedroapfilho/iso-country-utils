@@ -1,6 +1,7 @@
 {
   "name": "iso-country-utils",
   "author": "Pedro Filho",
+  "description": "A helper to get country codes following the ISO 3316",
   "module": "dist/iso-country-utils.esm.js",
   "version": "1.0.0",
   "license": "MIT",
