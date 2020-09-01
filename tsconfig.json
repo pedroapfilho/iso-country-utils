@@ -13,11 +13,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
-    "baseUrl": "./",
-    "paths": {
-      "*": ["src/*", "node_modules/*"]
-    },
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "jsx": "react",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }
