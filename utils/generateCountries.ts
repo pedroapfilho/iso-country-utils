@@ -3,12 +3,12 @@ const fs = require('fs');
 
 const SOURCE = 'https://wikipedia.org/wiki/ISO_3166-1';
 
-interface Country {
+type Country = {
   name: string;
   alpha2: string;
   alpha3: string;
   code: string;
-}
+};
 
 const run = async (): Promise<void> => {
   const browser = await puppeteer.launch();
@@ -18,11 +18,15 @@ const run = async (): Promise<void> => {
 
   const countries: Country[] = await page.evaluate(() => {
     const rows = document.querySelectorAll(
-      '#mw-content-text > div > table:nth-child(30) > tbody > tr'
+      '#mw-content-text > div.mw-parser-output > table:nth-child(32) > tbody > tr'
     );
+
     const data = Array.from(rows, row => {
       const columns = row.querySelectorAll('td');
-      return Array.from(columns, column => column.innerText);
+
+      return Array.from(columns, column =>
+        column.innerText.replace(/ *\[[^\]]*]/, '')
+      );
     });
 
     return data.map(country => ({

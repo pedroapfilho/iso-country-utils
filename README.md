@@ -20,15 +20,15 @@ yarn add iso-country-utils
 
 ## Usage
 
-This is the `Country` interface:
+This is the `Country` type:
 
 ```ts
-interface Country {
+type Country = {
   name: string;
   alpha2: string;
   alpha3: string;
   code: string;
-}
+};
 ```
 
 You can get all the countries just calling
